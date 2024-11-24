@@ -1,11 +1,11 @@
-package com.beautyhub.controllers;
+package com.beautyhub.Controllers;
 
-import com.beautyhub.dto.MasterCardDTO;
+import com.beautyhub.DTO.MasterCardDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/mastercards")

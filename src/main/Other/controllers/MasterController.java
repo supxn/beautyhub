@@ -1,11 +1,11 @@
-package com.beautyhub.controllers;
+package com.beautyhub.Controllers;
 
-import com.beautyhub.dto.MasterDTO;
+import com.beautyhub.DTO.UserResponseDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/masters")
@@ -14,7 +14,7 @@ public class MasterController {
 
     // Пример метода для создания нового мастера
     @PostMapping("/create")
-    public ResponseEntity<String> createMaster(@Valid @RequestBody MasterDTO masterDTO) {
+    public ResponseEntity<String> createMaster(@Valid @RequestBody UserResponseDTO masterDTO) {
         // Логика создания мастера (возможно, сохранение в базе данных)
         return ResponseEntity.ok("Мастер успешно создан");
     }
@@ -28,7 +28,7 @@ public class MasterController {
 
     // Пример метода для обновления данных мастера
     @PutMapping("/update/{id}")
-    public ResponseEntity<String> updateMaster(@PathVariable Long id, @Valid @RequestBody MasterDTO masterDTO) {
+    public ResponseEntity<String> updateMaster(@PathVariable Long id, @Valid @RequestBody UserResponseDTO masterDTO) {
         // Логика обновления информации о мастере в базе данных
         return ResponseEntity.ok("Мастер с ID " + id + " успешно обновлён");
     }

@@ -1,4 +1,4 @@
-package com.beautyhub.entities;
+package com.beautyhub.Entity;
 
 import javax.persistence.*;
 import java.util.List;
