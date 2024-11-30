@@ -1,4 +1,4 @@
-package com.beautyhub.enums;
+package com.beautyhub.Enum;
 
 public enum UserRole {
     CLIENT,

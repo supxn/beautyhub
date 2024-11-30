@@ -1,4 +1,4 @@
-package com.beautyhub.dto;
+package com.beautyhub.DTO;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -8,13 +8,9 @@ import lombok.Data;
 @Data
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @Builder(toBuilder = true)
-public class UserResponseDTO{
-    private Long id;
-    private String first_nmae;
-    private String last_name;
+public class UserRequestDTO {
+    private String username;
     private String password;
-    private UserRole role;
-    private String email;
-    private String city;
-    private String phone_number
+    private String firstName;
+    private String lastName;
 }

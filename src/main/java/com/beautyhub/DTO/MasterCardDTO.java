@@ -1,4 +1,4 @@
-package com.beautyhub.dto;
+package com.beautyhub.DTO;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
