@@ -10,10 +10,12 @@ import javax.persistence.*;
 
 @Table(name = "clients")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User{
         @Id
         private Long id;
-
+        private String username;
         private String firstName;
         private String lastName;
         private String email;
