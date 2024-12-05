@@ -1,0 +1,63 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4d4136;
+  margin-bottom: 1.5rem;
+}
+
+.gridContainer {
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  border-radius: 8px;
+  size: 5%;
+  height: 2%;
+  
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.cardLabel{
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  margin-left: 11%;
+}
+
+.descriptionList {
+  text-align: left;
+  list-style-type: none;
+
+  li {
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.extraList {
+  margin-top: 1rem;
+  text-align: left;
+  list-style-type: none;
+  .extraItem {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0.5rem;
+  }
+}

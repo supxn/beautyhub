@@ -1,0 +1,40 @@
+.appBar {
+  background-color: #ffffff !important;
+  box-shadow: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  margin-left: 42%;
+  display: flex;
+  justify-content: center; /* Центрует логотип */
+  align-items: center;
+  .logo {
+    height: 2.3rem; /* Ограничивает высоту логотипа */
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 50%;
+  margin-right: 10%; 
+}
+
+.menuItem {
+  color: #4d4136;
+  cursor: pointer;
+  font-size: 150% !important;
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+

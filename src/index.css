@@ -7,47 +7,13 @@ body {
   box-sizing: border-box;
 }
 
-.header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
-
-.logo-image {
-  width: 27%;
-  margin: auto;
+.img {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Центрирование логотипа */
-}
-
-.nav{
-  position: absolute;
-  right: 20px;
-}
-
-.nav ul{
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav li{
-  display: inline;
-}
-
-.nav a{
-  text-decoration: none;
-  color: #444; /* Цвет ссылок */
-  font-size: 24pt;
-}
-
-.nav a:hover {
-  text-decoration: underline; /* Подчеркивание при наведении */
+  right: 0;
+  width: 39.5%;
+  opacity: 0.6;
+  top: 17%;
+  left: 60.5%;
 }
 
 @media (max-width: 996px) {
@@ -97,24 +63,7 @@ body {
   .logo-image {
     width: 15%;
   }
-
   .nav a {
     font-size: 5pt;
   }
 }
-
-
-.separator {
-  border: 0;
-  height: 1px;
-  background-color: #B2B2B2;
-  opacity: 0.5;
-}
-
-.img {
-  position: absolute;
-  right: 0;
-  width: 35%;
-  opacity: 0.6;
-}
-
