@@ -1,5 +1,5 @@
 import imgBrow from './brows.jpg'
-import imgManic from './manicure.jpg'
+import imgManic from './nails.jpg'
 import imgLashes from './lashes.jpg'
 
 import styles from './servicesgrids.module.scss'
@@ -14,13 +14,14 @@ const services = [
     title: "Брови",
     label: "Коррекция бровей",
     description: [
-      "Счастье для бровей",
+      '"Счастье для бровей"',
       "Классическая коррекция",
       "Ламинирование бровей",
       "Окрашивание бровей",
+      "Вельвет",
       "Еще...",
     ],
-    extras: ["Косметология", "Макияж", "Массаж", "Все услуги мастеров..."],
+    extras: ["Косметология", "Макияж", "Массаж"],
   },
   {
     image: imgManic,
@@ -55,44 +56,41 @@ const services = [
 const Services = () => {
   return (
     <Box className={styles.container}>
-      <Typography variant="h4" className={styles.title}>
+      <Typography variant="h3" className={styles.title}>
         Выбери услугу...
       </Typography>
-      <Grid container spacing={3} className={styles.gridContainer}>
+      <Grid container spacing={4} className={styles.gridContainer}>
         {services.map((service, index) => (
-          <Grid item xs={12} sm={4} key={index}>
-            <Card className={styles.card}>
-              <CardMedia
-                component="img"
-                height="140"
-                image={service.image}
-                alt={service.title}
-                className={styles.cardImage}
-              />
-              <CardContent>
-                <Typography variant="h6" className={styles.cardTitle}>
-                  {service.title}
-                </Typography>
-                <Typography variant="h4" className={styles.cardLabel}>
-                  {service.label}
-                </Typography>
-                <ul className={styles.descriptionList}>
-                  {service.description.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-                <ul className={styles.extraList}>
-                  {service.extras.map((item, idx) => (
-                    <li key={idx} className={styles.extraItem}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <Grid item sm={4} key={index} className={styles.serviceItem}>
+            <Box className={styles.card}>
+              <img src={service.image} alt={service.title} className={styles.serviceImage} />
+              <Typography variant="h4" className={styles.serviceTitle}>
+                {service.title}
+              </Typography>
+            </Box>
+            <Box className={styles.textWrapper}>
+              <p className={styles.serviceLabel}>
+                {service.title === "Брови" ? "Коррекция бровей" : service.title === "Маникюр" ? "Ногти" : "Оформление ресниц"}
+              </p>
+              <ul className={styles.descriptionList}>
+                {service.description.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              <ul className={styles.extraList}>
+                {service.extras.map((item, idx) => (
+                  <li key={idx} className={styles.extraItem}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Box>
           </Grid>
         ))}
       </Grid>
+      <Typography variant="h5" className={styles.extraTitle}>
+        Все услуги мастеров...
+      </Typography>
     </Box>
   );
 };

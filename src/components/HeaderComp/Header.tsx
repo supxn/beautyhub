@@ -54,7 +54,21 @@ const HeaderBar: React.FC<HeaderProps> = () => {
           ))}
         </Box>
       </Toolbar>
-      <Box sx={{ height: "2px", backgroundColor: "#cccccc", width: "100%" }} />
+      <Box 
+        sx={{
+          display: "flex", 
+          justifyContent: "center", // Центрирует горизонтально
+          width: "100%", // Убедитесь, что родительский контейнер занимает всю ширину
+        }}
+        >
+          <Box 
+            sx={{
+              height: "2px", 
+              backgroundColor: "#cccccc", 
+              width: "95%" // Ширина разделителя
+            }} 
+          />
+      </Box>
     </AppBar>
     
   )

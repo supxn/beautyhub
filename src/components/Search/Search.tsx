@@ -7,8 +7,9 @@ import {
   Button,
   TextField
 } from "@mui/material";
+import backgrpic from './background.png'
 import search from './search-icon.png'
-import styles from './search.module.css'
+import styles from './search.module.scss'
 
 const SearchBar: React.FC = () => {
   return (
@@ -28,7 +29,11 @@ const SearchBar: React.FC = () => {
         <Button className={styles.searchButton}>
           <img className={styles.searchIcon} src={search} alt="search-icon" />
         </Button>
+        
       </Box>
+      <Box>
+      <img src={backgrpic} className={styles.backgrpic}/>
+    </Box>
     </Box>
   );
 };

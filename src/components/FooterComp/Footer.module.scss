@@ -1,0 +1,45 @@
+.footer {
+    background-color: #F5EBE2;  /* Фон подвала */
+    padding: 5%;  /* Отступы сверху и снизу */
+    padding-left: 14%;
+}
+  
+.footerContainer {
+    margin: 0;  
+}
+  
+.footerText {
+    .p {
+      margin: 5px 0;
+      font-size: 100%;
+    }
+  
+    .h6 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      font-size: 14px;
+    }
+}
+  
+.ul {
+    padding-left: 0;
+}
+  
+.footer {
+    text-align: left;
+}
+  
+@media (max-width: 600px) {
+    .footerColumn {
+        padding: 5px;
+    }
+}

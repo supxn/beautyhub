@@ -8,7 +8,21 @@ const AuthForm = () => {
       <Typography variant="h5" className={styles.title}>
         Авторизация
       </Typography>
-
+      <Box 
+        sx={{
+          display: "flex", 
+          justifyContent: "center", // Центрирует горизонтально
+          width: "100%", // Убедитесь, что родительский контейнер занимает всю ширину
+        }}
+        >
+          <Box 
+            sx={{
+              height: "1px", 
+              backgroundColor: "#AF9284", 
+              width: "100%" // Ширина разделителя
+            }} 
+          />
+      </Box>
       <form className={styles.form}>
         <TextField
           label="Номер телефона или Email"

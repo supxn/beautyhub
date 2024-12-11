@@ -4,7 +4,8 @@ import BrowsComp from './components/ServicesGrids/ServicesComp'
 import Header from './components/HeaderComp/Header'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {Provider} from "react-redux";
+import Footer from './components/FooterComp/Footer'
+//import {Provider} from "react-redux";
 
 import MainPage from './pages/mainPage/mainPage'
 import LoginPage from './pages/inlet/inlet'
@@ -23,6 +24,7 @@ const AppContent: React.FC = () => {
           <Route path="register" element={<RegisterPage/>}/>
         </Route>
       </Routes>
+      <Footer/>
     </Router>
   );
 };
