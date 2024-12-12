@@ -22,10 +22,6 @@ const HeaderMenuItems = [
   }
 ]
 
-function Separator() {
-  return <hr className={styles.separator}/>;
-}
-
 const HeaderBar: React.FC<HeaderProps> = () => {
   const location = useLocation();
   const navigate = useNavigate();
