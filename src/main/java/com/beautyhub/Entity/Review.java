@@ -1,6 +1,6 @@
 package com.beautyhub.Entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "reviews")
