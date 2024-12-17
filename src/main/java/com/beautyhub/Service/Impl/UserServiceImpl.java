@@ -3,12 +3,15 @@ package com.beautyhub.Service.Impl;
 import com.beautyhub.DTO.UserRequestDTO;
 import com.beautyhub.DTO.UserResponseDTO;
 import com.beautyhub.Entity.User;
+import com.beautyhub.Enum.UserRole;
 import com.beautyhub.Service.UserService;
 import com.beautyhub.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.beans.Transient;
@@ -17,9 +20,25 @@ import java.util.Optional;
 
 @Service
 @Primary
-@AllArgsConstructor
+@Slf4j
 public class UserServiceImpl implements UserService {
-    private UserRepository repository;
+    private final UserRepository repository;
+    //private final BCryptPasswordEncoder passwordEncoder;
+
+    @Autowired
+    public UserServiceImpl(UserRepository repository/*, BCryptPasswordEncoder passwordEncoder*/) {
+        this.repository = repository;
+        //this.passwordEncoder = passwordEncoder;
+    }
+
+    @Override
+    public User register(User user){
+        //user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole(UserRole.CLIENT);
+        User registeredUser = repository.save(user);
+        log.info("IN register - user {} successfully registered", registeredUser);
+        return registeredUser;
+    }
 
     @Override
     public List<User> getList(){
@@ -34,6 +53,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByEmail(String email){
         return repository.findByEmail(email);
+    }
+
+    @Override
+    public User findByUsername(String username){
+        return repository.findByEmail(username);
     }
 
     @Override
