@@ -1,0 +1,69 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFF8F280;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  position: absolute;
+  right: 0;
+  width: 39.5%;
+  opacity: 0.6;
+  top: 17%;
+  left: 60.5%;
+}
+
+@media (max-width: 996px) {
+  .logo-image {
+    width: 25%; /* Уменьшение логотипа на маленьких экранах */
+  }
+
+  .nav a {
+    font-size: 15pt; /* Уменьшение размера текста */
+  }
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .logo-image {
+    width: 25%; /* Уменьшение логотипа на маленьких экранах */
+  }
+
+  .nav a {
+    font-size: 15pt; /* Уменьшение размера текста */
+  }
+}
+
+@media (max-width: 620px){
+  .logo-image {
+    width: 20%;
+  }
+
+  .nav a {
+    font-size: 10pt;
+  }
+
+}
+
+@media (max-width: 430px){
+  .logo-image {
+    width: 19%;
+  }
+
+  .nav a {
+    font-size: 8pt;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .logo-image {
+    width: 15%;
+  }
+  .nav a {
+    font-size: 5pt;
+  }
+}

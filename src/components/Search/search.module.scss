@@ -1,0 +1,51 @@
+.searchBox {
+    border: none;
+    max-width: 50%;
+    padding-left: 10%;
+    padding-top: 8%;
+
+    .searchTitle {
+        font-size: 300%;
+        color: #4d4136;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .searchContainer {
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        background-color: #f5ebe1; /* Цвет фона строки поиска */
+        padding: 1%;
+        font-size: 150%;
+        .searchInput {
+            flex: 1;
+            margin-left: 2%;
+            margin-top: 1%;
+            ::placeholder{
+                font-size: 150%;
+            } 
+        }
+        .searchButton {
+            background-color: #E5CFB8;
+            border-radius: 8px;
+            padding: 4px;
+            cursor: pointer;
+            height: 3rem;
+            width: 0.5rem;
+            .searchIcon{
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+    .backgrpic{
+        position:absolute;
+        width: 40%;
+        height: 100%;
+        left: 60%;
+        top: 16%;
+        opacity: 0.5;
+    }
+}
+  

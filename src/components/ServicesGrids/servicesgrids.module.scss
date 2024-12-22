@@ -1,0 +1,87 @@
+.container {
+  padding: 5%;
+  text-align: center;
+}
+
+.title {
+  padding-top: 18%;
+  font-style: oblique;
+  font-weight: bold;
+  color: #4d4136;
+  padding-bottom: 2%;
+}
+
+.gridContainer {
+  padding-left: 0;
+  
+}
+
+.serviceItem {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #F5EBE2;
+  border-radius: 8px;
+  
+}
+
+.serviceImage {
+  overflow: hidden;
+  border-radius: 8%;
+  width: 64%;
+  padding: 4%;
+  padding-top: 10%;
+}
+
+.serviceTitle {
+  font-weight: bold;
+  color: #333333;
+  padding-bottom: 10%;
+}
+
+.textWrapper {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 8%;
+}
+
+.serviceLabel {
+  font-size: 160%;
+  font-weight: bolder;
+  color: #000000;
+  padding-bottom: 3%;
+}
+
+.descriptionList,
+.extraList {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    font-size: 120%;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+}
+
+.extraItem {
+  font-weight: bold;
+  color: #000000;
+  padding-bottom: 2%;
+}
+
+.extraTitle {
+  font-weight: bolder;
+  color: #000000;
+  margin-top: 2rem;
+  text-align: left;
+  padding-left: 2%;
+}
