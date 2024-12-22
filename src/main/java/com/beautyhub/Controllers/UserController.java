@@ -39,7 +39,7 @@ public class UserController {
     @Operation(
             summary = "Получить всех пользователей",
             description = "Возвращает список всех пользователей.")
-    @GetMapping("/all-users")
+    @GetMapping("/all")
     public List<User> allUsers(){
         return service.getList();
     }

@@ -4,17 +4,18 @@ import com.beautyhub.Enum.UserRole;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
-
+@Entity
 @Table(name = "clients")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User{
         @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
+
         private String username;
         private String firstName;
         private String lastName;
@@ -22,4 +23,5 @@ public class User{
         private String phone;
         private String password;
         private String city;
+        private UserRole roles;
 }

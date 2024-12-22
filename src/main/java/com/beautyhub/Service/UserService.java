@@ -15,8 +15,10 @@ public interface UserService{
     //List<User> allUsers();
     User saveUser(User user);
     User findByEmail(String email);
+    User findByUsername(String username);
     void deleteUser(Long id);
     UserResponseDTO GetById(Long id);
     UserResponseDTO update(Long id, UserRequestDTO userRequestDTO);
+    User register(User user);
 
 }
