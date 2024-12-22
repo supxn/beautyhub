@@ -16,7 +16,7 @@ public class JwtUser implements UserDetails {
     private final String lastName;
     private final String password;
     private final String email;
-    private final boolean enabled;
+    //private final boolean enabled;
     private final Date lastPasswordResetDate;
     private final Collection<? extends GrantedAuthority> authorities;
 
@@ -28,7 +28,7 @@ public class JwtUser implements UserDetails {
         String password,
         Collection<? extends GrantedAuthority> authorities,
         String email,
-        boolean enabled,
+        //boolean enabled,
         Date lastPasswordResetDate
     ) {
         this.id = id;
@@ -37,7 +37,7 @@ public class JwtUser implements UserDetails {
         this.lastName = lastName;
         this.password = password;
         this.email = email;
-        this.enabled = enabled;
+        //this.enabled = enabled;
         this.lastPasswordResetDate = lastPasswordResetDate;
         this.authorities = authorities;
     }
@@ -70,6 +70,6 @@ public class JwtUser implements UserDetails {
     @Override
     public boolean isCredentialsNonExpired() {return true;}
 
-    @Override
-    public boolean isEnabled() {return enabled;}
+//    @Override
+//    public boolean isEnabled() {return enabled;}
 }

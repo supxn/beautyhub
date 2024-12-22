@@ -11,12 +11,9 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.beans.Transient;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Primary
@@ -34,7 +31,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User register(User user){
         //user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(UserRole.CLIENT);
+        user.setRoles(UserRole.CLIENT);
         User registeredUser = repository.save(user);
         log.info("IN register - user {} successfully registered", registeredUser);
         return registeredUser;

@@ -5,10 +5,13 @@ import com.beautyhub.Enum.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class JwtUserFactory {
-    public JwtUserFactory() {}
+    public JwtUserFactory() {
+    }
 
     public static JwtUser create(User user) {
         return new JwtUser(
@@ -17,15 +20,14 @@ public final class JwtUserFactory {
                 user.getFirstName(),
                 user.getLastName(),
                 user.getPassword(),
-                null,
+                mapToGrantedAuthorities(user.getRoles()),
                 user.getEmail(),
-                user.getRole().equals(UserRole.CLIENT),
-                null //!!
+                //user.getRoles().equals(UserRole.CLIENT),
+                null //user.getUpdated()
         );
     }
 
-//    private static List<GrantedAuthority> mapToGrantedAuthoriites(List<UserRole> userRoles){
-//        return userRoles
-//                .map(role -> new SimpleGrantedAuthority())
-//    }
+    private static List<GrantedAuthority> mapToGrantedAuthorities(UserRole userRole) {
+        return List.of(new SimpleGrantedAuthority(userRole.toString()));
+    }
 }

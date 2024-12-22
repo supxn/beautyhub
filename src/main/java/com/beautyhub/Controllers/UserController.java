@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-//@RequestMapping("/users")
+@RequestMapping("/users")
 @AllArgsConstructor
 @Validated
 public class UserController {
@@ -39,7 +39,7 @@ public class UserController {
     @Operation(
             summary = "Получить всех пользователей",
             description = "Возвращает список всех пользователей.")
-    @GetMapping("/users")
+    @GetMapping("/all")
     public List<User> allUsers(){
         return service.getList();
     }

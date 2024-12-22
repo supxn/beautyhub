@@ -23,5 +23,5 @@ public class User{
         private String phone;
         private String password;
         private String city;
-        private UserRole role;
+        private UserRole roles;
 }
