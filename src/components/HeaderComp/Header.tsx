@@ -8,7 +8,8 @@ import {
   Box
 } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
-import {HeaderProps} from "../HeaderComp/HeaderProps"
+import {HeaderProps} from "../HeaderComp/HeaderProps";
+import HeartIcon from "@mui/icons-material/FavoriteBorder";
 
 
 const HeaderMenuItems = [
