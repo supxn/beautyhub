@@ -34,7 +34,6 @@ const AuthForm = () => {
             fullWidth
             className={styles.input}
             margin="normal"
-            sx = {{color: "#4d4136"}}
           />
           <TextField
             label="Фамилия"
