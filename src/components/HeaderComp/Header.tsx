@@ -64,9 +64,9 @@ const HeaderBar: React.FC<HeaderProps> = () => {
         >
           <Box              //разделитель под шапкой 
             sx={{
-              height: "2px", 
+              height: "1px", 
               backgroundColor: "#AF9284", 
-              width: "95%" // Ширина разделителя
+              width: "85%" // Ширина разделителя
             }} 
           />
       </Box>
