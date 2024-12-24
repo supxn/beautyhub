@@ -19,7 +19,7 @@ const HeaderMenuItems = [
   },
   {
     path: "/login",
-    label: "Вход",
+    label: "Зайти",
   }
 ]
 
