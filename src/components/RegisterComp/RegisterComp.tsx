@@ -14,6 +14,7 @@ const AuthForm = () => {
           display: "flex", 
           justifyContent: "center", // Центрирует горизонтально
           width: "100%",            // Убедитесь, что родительский контейнер занимает всю ширину
+        
         }}
         >
           <Box              //разделитель под шапкой 
@@ -21,6 +22,7 @@ const AuthForm = () => {
               height: "2px", 
               backgroundColor: "#AF9284", 
               width: "95%" // Ширина разделителя
+              
             }} 
           />
       </Box>
@@ -32,6 +34,7 @@ const AuthForm = () => {
             fullWidth
             className={styles.input}
             margin="normal"
+            sx = {{color: "#4d4136"}}
           />
           <TextField
             label="Фамилия"
