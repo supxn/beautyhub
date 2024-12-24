@@ -1,5 +1,5 @@
 .appBar {
-  background-color: #FFF8F280  !important;
+  background-color: #FFFCF9  !important;
   box-shadow: none;
 }
 
@@ -27,10 +27,10 @@
   margin-right: 10%; 
 }
 
-.menuItem {
-  color: #4d4136;
+.menuItem {         //текст в шапке
+  color: #AF9284;
   cursor: pointer;
-  font-size: 150% !important;
+  font-size: 100% !important;
   :hover {
     text-decoration: underline;
   }

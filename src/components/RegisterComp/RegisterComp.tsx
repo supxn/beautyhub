@@ -8,6 +8,22 @@ const AuthForm = () => {
         <Typography variant="h5" className={styles.title}>
           Регистрация
         </Typography>
+
+        <Box 
+        sx={{
+          display: "flex", 
+          justifyContent: "center", // Центрирует горизонтально
+          width: "100%",            // Убедитесь, что родительский контейнер занимает всю ширину
+        }}
+        >
+          <Box              //разделитель под шапкой 
+            sx={{
+              height: "2px", 
+              backgroundColor: "#AF9284", 
+              width: "95%" // Ширина разделителя
+            }} 
+          />
+      </Box>
   
         <form className={styles.form}>
           <TextField
