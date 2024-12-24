@@ -1,4 +1,6 @@
-import logo from './BeautyHub Logo.jpg';
+import logo from './BeautyHubLogo.svg';
+import heart from './Heart.svg';
+import user from './User.svg';
 import styles from './Header.module.scss'
 import {
   AppBar,
@@ -10,16 +12,18 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import {HeaderProps} from "../HeaderComp/HeaderProps";
 import HeartIcon from "@mui/icons-material/FavoriteBorder";
+import UserIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 
 const HeaderMenuItems = [
   {
     path: "/register",
-    label: "Регистрация",
+    icon: <HeartIcon className={styles.icon} />,
+    
   },
   {
     path: "/login",
-    label: "Зайти",
+    icon: <UserIcon className={styles.icon} />,
   }
 ]
 
@@ -46,7 +50,7 @@ const HeaderBar: React.FC<HeaderProps> = () => {
               className={`${styles.menuItem} ${getActiveClass(item.path)}`}
               onClick={() => navigate(item.path)}
             >
-              {item.label}
+              {item.icon}
             </Typography>
           ))}
         </Box>
@@ -55,13 +59,13 @@ const HeaderBar: React.FC<HeaderProps> = () => {
         sx={{
           display: "flex", 
           justifyContent: "center", // Центрирует горизонтально
-          width: "100%", // Убедитесь, что родительский контейнер занимает всю ширину
+          width: "100%",            // Убедитесь, что родительский контейнер занимает всю ширину
         }}
         >
-          <Box 
+          <Box              //разделитель под шапкой 
             sx={{
               height: "2px", 
-              backgroundColor: "#cccccc", 
+              backgroundColor: "#AF9284", 
               width: "95%" // Ширина разделителя
             }} 
           />
