@@ -7,8 +7,8 @@ import {
   Button,
   TextField
 } from "@mui/material";
-import backgrpic from './background.png'
-import search from './search-icon.png'
+import backgrpic from './Background.png'
+import search from './SearchIcon.svg'
 import styles from './search.module.scss'
 
 const SearchBar: React.FC = () => {

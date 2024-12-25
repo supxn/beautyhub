@@ -1,51 +1,59 @@
 .container {
-    background-color: #f5ebe1; /* Легкий фоновый цвет */
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 50px auto;
-    text-align: center;
-  }
+  background-color: #f5ebe1; /* Легкий фоновый цвет */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8C7062;
+  padding-bottom: 3%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  color: #4d4136 !important;
+  border-color: #4d4136 !important;
   
-  .title {
-    font-size: 1.8rem;
-    font-weight: bold;
+}
+
+.input {
+  margin-bottom: 1rem;
+  color: #4d4136 !important;
+  border-color: #4d4136 !important;
+}
+.input:active {
+  color: #4d4136 !important;
+  outline: none !important;  
+  border-color: #4d4136 !important;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 5%;
+  color: #4d4136;
+
+}
+
+.registerButton {
+  padding: 0.8rem;
+  color: #4d4136 !important;
+  border-color: #E3D5CA !important;
+  background-color: #E3D5CA !important;
+  &:hover {
     color: #4d4136;
-    margin-bottom: 1.5rem;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input {
-    background-color: #fff;
-    margin-bottom: 1rem;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .submitButton {
+    border-color: #4d4136;
+
     background-color: #e5cfb8;
-    color: #4d4136;
-    padding: 0.8rem;
-    &:hover {
-      background-color: #d4b899;
-    }
   }
-  
-  .registerButton {
-    background-color: #fff;
-    color: #4d4136;
-    padding: 0.8rem;
-    border: 1px solid #e5cfb8;
-    &:hover {
-      background-color: #e5cfb8;
-    }
-  }
-  
+}

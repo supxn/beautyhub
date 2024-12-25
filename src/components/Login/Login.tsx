@@ -30,6 +30,7 @@ const AuthForm = () => {
           fullWidth
           className={styles.input}
           margin="normal"
+          sx={{borderColor: "dark"}}
         />
         <TextField
           label="Пароль"
@@ -41,7 +42,7 @@ const AuthForm = () => {
         />
         
         <Box className={styles.buttons}>
-          <Button variant="contained" className={styles.submitButton}>
+          <Button variant="outlined" className={styles.submitButton}>
             Вход
           </Button>
           <Button variant="outlined" className={styles.registerButton}>

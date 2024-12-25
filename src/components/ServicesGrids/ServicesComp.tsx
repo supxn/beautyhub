@@ -56,7 +56,7 @@ const services = [
 const Services = () => {
   return (
     <Box className={styles.container}>
-      <Typography variant="h3" className={styles.title}>
+      <Typography variant="h3" className={styles.title} sx = {{fontStyle: "italic"}}>
         Выбери услугу...
       </Typography>
       <Grid container spacing={4} className={styles.gridContainer}>
