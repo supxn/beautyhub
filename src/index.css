@@ -6,20 +6,12 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FFF8F280;
+  font-weight: 400;
+  background-color: #FFF8F250;
   color: #444;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.img {
-  position: absolute;
-  right: 0;
-  width: 39.5%;
-  opacity: 0.6;
-  top: 17%;
-  left: 60.5%;
 }
 
 @media (max-width: 996px) {

@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.icon {
+  font-size: 50%;
+}
+
 .logoContainer {
   margin-left: 42%;
   display: flex;
@@ -23,8 +27,9 @@
 
 .menu {
   display: flex;
-  gap: 50%;
-  margin-right: 10%; 
+  gap: 28%;
+  margin-right: 10%;
+  box-shadow: none;
 }
 
 .menuItem {         //текст в шапке
@@ -40,3 +45,7 @@
   font-weight: bold;
 }
 
+.profileMenu {
+  color: #F5EBE2;
+  height: 70%;
+}

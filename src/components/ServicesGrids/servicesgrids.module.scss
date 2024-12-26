@@ -4,11 +4,15 @@
 }
 
 .title {
-  padding-top: 18%;
-  font-style: oblique;
+  padding-top: 4%;
   font-weight: bold;
   color: #4d4136;
   padding-bottom: 2%;
+}
+
+.link {
+  text-decoration: none; // Убираем подчеркивание
+  color: inherit; // Наследуем цвет текста
 }
 
 .gridContainer {
@@ -60,13 +64,23 @@
   padding-bottom: 3%;
 }
 
-.descriptionList,
-.extraList {
+.descriptionList{
   list-style-type: none;
   padding: 0;
 
   li {
     font-size: 120%;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+}
+
+.extraList {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    font-size: 150%;
     color: #000000;
     padding-bottom: 3%;
   }

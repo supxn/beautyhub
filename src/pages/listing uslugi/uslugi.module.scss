@@ -1,0 +1,27 @@
+.services {
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    background-color:#FFF8F250;
+  
+    .header {
+      display: flex;
+      align-items: center; /* Выравнивание по вертикали */
+      justify-content: flex-start; /* Выровнять контент по началу контейнера */
+      margin-bottom: 20px;
+  
+      img.flowpic {
+        width: 70%; /* Уменьшаем размер изображения */
+        height: auto;
+        opacity: 0.6; /* Процент прозрачности */
+      }
+  
+      h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0; /* Убираем стандартные отступы */
+        padding: 0;
+      }
+    }
+  }
+  

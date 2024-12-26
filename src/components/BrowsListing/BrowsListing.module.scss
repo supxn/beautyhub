@@ -1,0 +1,55 @@
+.brows {
+    padding-bottom: 3%;
+  
+      h3 {
+        font-size: 160%;
+        margin-bottom: 1%;
+      }
+  
+      p {
+        font-size: 130%;
+        margin-bottom: 2%;
+        color: #000;
+      }
+  
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 30%));
+        gap: 5%;
+  
+        .card {
+          background: #FFF8F250;
+          border-radius: 8px;
+          box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+          text-align: center;
+          overflow: hidden;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: translateY(-5px);
+          }
+  
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+  
+          h4 {
+            font-size: 100%;
+            margin: 3%;
+          }
+  
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 5%;
+  
+            li {
+              font-size: 14px;
+              margin: 5px 0;
+            }
+          }
+        }
+      }
+    }
