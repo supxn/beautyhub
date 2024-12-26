@@ -10,6 +10,11 @@
   padding-bottom: 2%;
 }
 
+.link {
+  text-decoration: none; // Убираем подчеркивание
+  color: inherit; // Наследуем цвет текста
+}
+
 .gridContainer {
   padding-left: 0;
   

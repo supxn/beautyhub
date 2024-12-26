@@ -8,15 +8,6 @@ body {
   box-sizing: border-box;
 }
 
-.img {
-  position: absolute;
-  right: 0;
-  width: 39.5%;
-  opacity: 0.6;
-  top: 17%;
-  left: 60.5%;
-}
-
 @media (max-width: 996px) {
   .logo-image {
     width: 25%; /* Уменьшение логотипа на маленьких экранах */

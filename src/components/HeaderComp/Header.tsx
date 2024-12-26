@@ -59,7 +59,7 @@ const HeaderBar: React.FC<HeaderProps> = () => {
             sx ={{'& .MuiPaper-root': {boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)'}}}
           >
             <MenuItem onClick={() => { navigate('/profile'); handleMenuClose(setHeartMenuAnchor); }}>Профиль</MenuItem>
-            <MenuItem onClick={() => { navigate('/favorites'); handleMenuClose(setHeartMenuAnchor); }}>Избранное</MenuItem>
+            <MenuItem onClick={() => { navigate('/favorite'); handleMenuClose(setHeartMenuAnchor); }}>Избранное</MenuItem>
             <MenuItem onClick={() => { navigate('/settings'); handleMenuClose(setHeartMenuAnchor); }}>Настройки</MenuItem>
             <MenuItem onClick={() => { navigate('/main'); handleMenuClose(setHeartMenuAnchor); }}>Выход</MenuItem>
           </Menu>

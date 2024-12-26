@@ -1,62 +1,52 @@
-import imgBrow from './brows.jpg'
-import imgManic from './nails.jpg'
-import imgLashes from './lashes.jpg'
-
-import styles from './servicesgrids.module.scss'
-
 import React from "react";
-import { Grid, Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
+import { Link } from "react-router-dom"; // Импортируем Link из react-router-dom
 
+import imgBrow from './brows.jpg';
+import imgManic from './nails.jpg';
+import imgLashes from './lashes.jpg';
+
+import styles from './servicesgrids.module.scss';
 
 const services = [
   {
     image: imgBrow,
     title: "Брови",
-    label: "Коррекция бровей",
     description: [
       '"Счастье для бровей"',
-      "Классическая коррекция",
+      "Классическая коррекция", 
       "Ламинирование бровей",
       "Окрашивание бровей",
       "Вельвет",
-      "Еще...",
+      "Еще..."
     ],
-    extras: ["Косметология", "Макияж", "Массаж"],
+    extras: ["Косметология", "Макияж", "Массаж"]
   },
   {
     image: imgManic,
     title: "Маникюр",
-    label: "Ногти",
     description: [
-      "Аппаратный маникюр",
-      "Корейский маникюр",
-      "Педикюр",
-      "Наращивание ногтей",
-      "Классический маникюр",
-      "Еще...",
+      "Аппаратный маникюр", "Корейский маникюр", 
+      "Педикюр", "Наращивание ногтей", 
+      "Классический маникюр", "Еще..."
     ],
-    extras: ["Парикмахеры", "Пирсинг", "Спа-процедуры"],
+    extras: ["Парикмахеры", "Пирсинг", "Спа-процедуры"]
   },
   {
     image: imgLashes,
     title: "Ресницы",
-    label: "Оформление ресниц",
     description: [
-      "Наращивание ресниц",
-      "Ламинирование ресниц",
-      "Биозавивка",
-      "Лифтинг",
-      "Окрашивание",
-      "Еще...",
+      "Наращивание ресниц", "Ламинирование ресниц", 
+      "Биозавивка", "Лифтинг", "Окрашивание", "Еще..."
     ],
-    extras: ["Татуаж", "Татуировки", "Эпиляция"],
-  },
+    extras: ["Татуаж", "Татуировки", "Эпиляция"]
+  }
 ];
 
 const Services = () => {
   return (
     <Box className={styles.container}>
-      <Typography variant="h3" className={styles.title} sx = {{fontStyle: "italic"}}>
+      <Typography variant="h3" className={styles.title} sx={{ fontStyle: "italic" }}>
         Выбери услугу...
       </Typography>
       <Grid container spacing={4} className={styles.gridContainer}>
@@ -65,12 +55,23 @@ const Services = () => {
             <Box className={styles.card}>
               <img src={service.image} alt={service.title} className={styles.serviceImage} />
               <Typography variant="h4" className={styles.serviceTitle}>
-                {service.title}
+                {/* Оборачиваем заголовки "Брови", "Маникюр" и "Ресницы" в Link для перехода */}
+                {service.title === "Маникюр" || service.title === "Брови" || service.title === "Ресницы" ? (
+                  <Link to="/uslugi" className={styles.link}>
+                    {service.title}
+                  </Link>
+                ) : (
+                  service.title
+                )}
               </Typography>
             </Box>
             <Box className={styles.textWrapper}>
               <p className={styles.serviceLabel}>
-                {service.title === "Брови" ? "Коррекция бровей" : service.title === "Маникюр" ? "Ногти" : "Оформление ресниц"}
+                {service.title === "Брови"
+                  ? "Коррекция бровей"
+                  : service.title === "Маникюр"
+                  ? "Ногти"
+                  : "Оформление ресниц"}
               </p>
               <ul className={styles.descriptionList}>
                 {service.description.map((item, idx) => (
