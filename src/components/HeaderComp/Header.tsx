@@ -1,5 +1,9 @@
 import logo from './BeautyHubLogo.svg';
+
 import styles from './Header.module.scss';
+import heart from './Heart.svg';
+import user from './User.svg';
+import styles from './Header.module.scss'
 import {
   AppBar,
   Toolbar,
@@ -15,6 +19,19 @@ import HeartIcon from "@mui/icons-material/FavoriteBorder";
 import UserIcon from '@mui/icons-material/PersonOutlineOutlined';
 import React, { useState, MouseEvent } from 'react';
 import createTheme from '@mui/material/styles';
+
+
+const HeaderMenuItems = [
+  {
+    path: "/register",
+    icon: <HeartIcon className={styles.icon} />,
+    
+  },
+  {
+    path: "/login",
+    icon: <UserIcon className={styles.icon} />,
+  }
+]
 
 const HeaderBar: React.FC<HeaderProps> = () => {
   const location = useLocation();
@@ -80,6 +97,15 @@ const HeaderBar: React.FC<HeaderProps> = () => {
             <MenuItem onClick={() => { navigate('/login'); handleMenuClose(setUserMenuAnchor); }}>Вход</MenuItem>
             <MenuItem onClick={() => { navigate('/register'); handleMenuClose(setUserMenuAnchor); }}>Регистрация</MenuItem>
           </Menu>
+          {HeaderMenuItems.map((item) => (
+            <Typography
+              key={item.path}
+              className={`${styles.menuItem} ${getActiveClass(item.path)}`}
+              onClick={() => navigate(item.path)}
+            >
+              {item.icon}
+            </Typography>
+          ))}
         </Box>
       </Toolbar>
 
@@ -98,6 +124,17 @@ const HeaderBar: React.FC<HeaderProps> = () => {
             width: "85%",
           }}
         />
+          justifyContent: "center", // Центрирует горизонтально
+          width: "100%",            // Убедитесь, что родительский контейнер занимает всю ширину
+        }}
+        >
+          <Box              //разделитель под шапкой 
+            sx={{
+              height: "1px", 
+              backgroundColor: "#AF9284", 
+              width: "85%" // Ширина разделителя
+            }} 
+          />
       </Box>
     </AppBar>
   );

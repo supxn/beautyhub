@@ -13,6 +13,7 @@ import FavoritePage from './pages/favorite/favorite'
 import SettingsPage from './pages/settings/settings'
 
 
+
 const AppContent: React.FC = () => {
   return(
     <Router>
